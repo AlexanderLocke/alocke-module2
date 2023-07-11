@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    section {
+      padding: 50px;
+    }
+
+    section h2 {
+      margin-top: 0;
+    }
+
+    .work-section img {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .work-section img:first-child {
+      max-width: 600px;
+    }
+
+    /* Media queries */
+    @media screen and (max-width: 600px) {
+      section {
+        padding: 30px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      header {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Developer Portfolio</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Developer's name and description.</p>
+  </section>
+
+  <section id="work">
+    <h2>Work</h2>
+    <div class="work-section">
+      <a href="application1.html"><img src="application1.jpg" alt="Application 1"></a>
+      <a href="application2.html"><img src="application2.jpg" alt="Application 2"></a>
+      <a href="application3.html"><img src="application3.jpg" alt="Application 3"></a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Contact information.</p>
+  </section>
+
+  <script>
+    // JavaScript to handle smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
