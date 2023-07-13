@@ -10,4 +10,4 @@ Two Column CSS approach taken from W3 schools: https://www.w3schools.com/howto/h
 
 All game projects were created by teams I was involved with
 
-Screenshot <img src="./images/Screenshot.png>
+Screenshot![Screenshot](https://github.com/AlexanderLocke/alocke-module2/assets/137340611/516347d8-4c15-4115-98fb-d3687d60083d)
