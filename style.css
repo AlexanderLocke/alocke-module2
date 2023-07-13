@@ -3,28 +3,19 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-.column {
-  float: left;
+  scroll-behavior: smooth; /*Provide smooth scrolling for HTML*/
 }
 
 .left {
+  display: block;
   width: 25%;
   margin-left: 20px;
 }
 
 .right {
+  display: block;
   width: 75%;
   margin-left: 300px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 body {
@@ -33,6 +24,7 @@ body {
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: .25px;
     margin: 0;
+    padding: 0;
     background-color: rgb(0, 94, 94);
 }
 
@@ -69,6 +61,8 @@ nav ul li a {
 section {
   padding: 20px;
   border-left: 10px solid var(--white);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 
@@ -77,12 +71,13 @@ section h2 {
 }
 
 .profile-pic {
-  max-width: 25%;
-  display: inline-flex;
+  float: right;
+  max-width: 20%;
+  max-height: 20%;
   margin: 10px;
-  justify-content: flex-end;
   border: 5px solid var(--white);
   box-shadow: 10px 5px 5px black;
+  border-radius: 50%;
 }
 
 .about-section {
@@ -90,18 +85,38 @@ section h2 {
   padding: 5px;
 }
 
-.work-section img {
+.application {
+  flex: 1 0 300px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--white);
+  transition: background-color 0.3s;
+  user-select: none;
+  opacity: 50%;
+}
+
+.application img {
   width: 100%;
-  max-width: 400px;
   margin-bottom: 20px;
   cursor: pointer;
+  display: block;
+  margin-top: auto;
 }
 
-.work-section img:first-child {
-  max-width: 600px;
+/*Grid for the apps I'm showing that aren't the first one*/
+.application-grid {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto;
+  padding: 10px;
 }
 
-/* Media queries */
+.application:hover {
+  background-color: blue;
+  opacity: 100%;
+}
+
 @media screen and (max-width: 600px) {
   section {
     padding: 30px;
